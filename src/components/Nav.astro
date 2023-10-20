@@ -1,0 +1,30 @@
+---
+const textLinks: { label: string; href: string }[] = [
+  { label: "Home", href: "/" },
+  { label: "Work", href: "/work/" },
+  { label: "Blog", href: "/blog/" },
+];
+---
+
+<nav>
+  <ul>
+    {
+      textLinks.map(({ label, href }) => (
+        <li>
+          <a aria-current={Astro.url.pathname == href} href={href}>
+            {label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  a {
+    color: green;
+  }
+  a[aria-current] {
+    font-weight: bold;
+  }
+</style>
