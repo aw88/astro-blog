@@ -4,6 +4,10 @@ const textLinks: { label: string; href: string }[] = [
   { label: "Work", href: "/work/" },
   { label: "Blog", href: "/blog/" },
 ];
+
+function isCurrent(href: string): boolean {
+  return Astro.url.pathname == href || (href.length > 1 && Astro.url.pathname.startsWith(href));
+}
 ---
 
 <nav>
@@ -11,7 +15,7 @@ const textLinks: { label: string; href: string }[] = [
     {
       textLinks.map(({ label, href }) => (
         <li>
-          <a aria-current={Astro.url.pathname == href} href={href}>
+          <a aria-current={isCurrent(href)} href={href}>
             {label}
           </a>
         </li>
@@ -21,9 +25,6 @@ const textLinks: { label: string; href: string }[] = [
 </nav>
 
 <style>
-  a {
-    color: green;
-  }
   a[aria-current] {
     font-weight: bold;
   }

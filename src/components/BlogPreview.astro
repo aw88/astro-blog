@@ -1,0 +1,15 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  project: CollectionEntry<"blog">;
+}
+
+const { data, slug } = Astro.props.blog;
+const options = { year: 'numeric', month: 'long', day: 'numeric' };
+---
+
+<a href={`/blog/${slug}`}>
+  {data.title}
+  <small>{data.publishDate.toLocaleDateString("en-US", options)}</small>
+</a>
