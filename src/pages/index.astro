@@ -1,9 +1,38 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogList from "../components/BlogList.astro";
+import WorkProjectPreview from "../components/WorkProjectPreview.astro";
+
+const latestBlogPosts = (await getCollection("blog"))
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+  .slice(0, 3);
+
+const highlightedWork = (await getCollection("work")).filter((work) => work.data.highlight);
 ---
 
 <BaseLayout>
-  <h1>Astro</h1>
-  <a href="/">Some link</a>
-  <p>Hello, world!</p>
+  <p class="font-size-l mb-8">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare vitae risus vel facilisis. Quisque sed ex
+    viverra leo cursus placerat. Suspendisse iaculis, nunc at finibus interdum, sapien risus rhoncus mauris, a porttitor
+    urna erat sit amet dui. Donec in luctus sem, eu mattis neque. Integer sit amet ex at massa sodales posuere. Vivamus
+    sodales, arcu eget dictum ornare, justo orci dapibus felis, ac feugiat massa nibh sed ex. Morbi sit amet lobortis
+    leo, ut accumsan libero.
+  </p>
+  <div>
+    <h1>Latest blog posts</h1>
+    <BlogList posts={latestBlogPosts} hidePagination={true} />
+  </div>
+  <div>
+    <h1>Highlighted work</h1>
+    <ul>
+      {
+        highlightedWork.map((project) => (
+          <li>
+            <WorkProjectPreview project={project} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </BaseLayout>

@@ -1,6 +1,7 @@
 ---
 title: Consectetur adipiscing elit
 publishDate: 2023-06-20
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales purus ac nisi tristique lobortis. Proin elit ex, euismod nec suscipit ac, lacinia id. 
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac erat id sem egestas accumsan id id purus. Nullam leo nisi, mattis quis pellentesque nec, aliquam facilisis massa. Cras bibendum orci libero, vel gravida lorem blandit sit amet. Sed tristique felis congue lectus tincidunt, non ornare metus consequat. Praesent egestas, arcu vel ullamcorper dignissim, est dolor hendrerit lectus, vel consequat justo lacus tristique urna. Vestibulum commodo gravida tincidunt. Pellentesque placerat ante eu augue maximus hendrerit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse malesuada mi vel libero lacinia, sit amet tristique tortor luctus. Sed porttitor risus vitae feugiat tempor. Praesent egestas neque quis mattis hendrerit. Nullam at tellus vel eros finibus interdum. Nullam nec metus quis justo sagittis iaculis sit amet vel ligula. In a molestie nulla, in convallis urna. Maecenas nec sem enim. Integer vitae turpis dapibus, egestas lorem eu, viverra tortor.

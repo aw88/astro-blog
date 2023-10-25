@@ -13,9 +13,10 @@ interface Props {
   prevUrl?: string;
   nextUrl?: string;
   lastUrl?: string;
+  hidePagination?: boolean;
 }
 
-const { posts, length, currentUrl, currentPage, firstUrl, prevUrl, nextUrl, lastUrl } = Astro.props;
+const { posts, length, currentUrl, currentPage, firstUrl, prevUrl, nextUrl, lastUrl, hidePagination } = Astro.props;
 ---
 
 <ul>
@@ -28,12 +29,14 @@ const { posts, length, currentUrl, currentPage, firstUrl, prevUrl, nextUrl, last
   }
 </ul>
 
-<Pagination
-  length={length}
-  currentUrl={currentUrl}
-  currentPage={currentPage}
-  firstUrl={firstUrl}
-  prevUrl={prevUrl}
-  next={nextUrl}
-  lastUrl={lastUrl}
-/>
+{ !hidePagination &&
+  <Pagination
+    length={length}
+    currentUrl={currentUrl}
+    currentPage={currentPage}
+    firstUrl={firstUrl}
+    prevUrl={prevUrl}
+    nextUrl={nextUrl}
+    lastUrl={lastUrl}
+  />
+}

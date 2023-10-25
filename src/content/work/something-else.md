@@ -1,12 +1,10 @@
 ---
-title: Astro Blog
-publishDate: 2023-10-20 00:00:00
+title: Something Else
+publishDate: 2023-10-12 00:00:00
 description: |
-  This blog. Or something. I don't know 🤷.
+  Something else I've made. I don't know 🤷.
 tags:
   - Dev
-  - Astro
-  - Frontend
 highlight: true
 ---
 

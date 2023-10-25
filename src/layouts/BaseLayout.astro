@@ -2,6 +2,8 @@
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
 
+import "../styles/global.css";
+
 interface Props {
   title?: string | undefined;
   description?: string | undefined;
@@ -16,11 +18,23 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="description" property="og:description" content={description} />
-    <title>{title}</title>
+    <title>{["Alex Walton", title].filter(x => x).join(" | ")}</title>
   </head>
-  <body>
-    <Nav />
-    <slot />
-    <Footer />
+  <body class="bg-gray-600">
+    <a href="#main-content" id="skip-link" class="skip-link">
+      Skip to main content
+    </a>
+    <header class="bg-gray-800 p-4 text-gray-400">
+      <div class="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
+        <h1 class="font-bold mb-0">Alex Walton</h1>
+        <Nav />
+      </div>
+    </header>
+    <main id="main-content" class="bg-gray-400 mx-auto max-w-6xl p-2 sm:p-6 lg:p-8">
+      <slot />
+    </main>
+    <footer class="mx-auto max-w-6xl px-2 pb-2 sm:px-6 sm:p-6 lg:px-8">
+      <Footer />
+    </footer>
   </body>
 </html>

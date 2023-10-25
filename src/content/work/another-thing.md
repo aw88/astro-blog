@@ -1,13 +1,10 @@
 ---
-title: Astro Blog
-publishDate: 2023-10-20 00:00:00
+title: Another thing
+publishDate: 2023-10-10 00:00:00
 description: |
-  This blog. Or something. I don't know 🤷.
+  Another thing I might do. I don't know 🤷.
 tags:
   - Dev
-  - Astro
-  - Frontend
-highlight: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare vitae risus vel facilisis. Quisque sed ex viverra leo cursus placerat. Suspendisse iaculis, nunc at finibus interdum, sapien risus rhoncus mauris, a porttitor urna erat sit amet dui. Donec in luctus sem, eu mattis neque. Integer sit amet ex at massa sodales posuere. Vivamus sodales, arcu eget dictum ornare, justo orci dapibus felis, ac feugiat massa nibh sed ex. Morbi sit amet lobortis leo, ut accumsan libero. Aenean fermentum non purus scelerisque tincidunt. Aliquam euismod auctor justo, vel volutpat ex pharetra pretium. Duis sollicitudin, leo sit amet tempus accumsan, neque leo tempor nunc, sed suscipit tortor felis sit amet dolor. Vestibulum finibus mi quis blandit bibendum. Sed vel ultrices tortor. Sed sagittis dignissim mauris, vehicula euismod justo hendrerit nec. Donec cursus nisl orci, id luctus nunc auctor eu. Suspendisse quis dignissim nulla.

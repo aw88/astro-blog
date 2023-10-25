@@ -9,7 +9,8 @@ const { data, slug } = Astro.props.blog;
 const options = { year: 'numeric', month: 'long', day: 'numeric' };
 ---
 
-<a href={`/blog/${slug}`}>
-  {data.title}
+<a href={`/blog/${slug}`} class="block mb-8">
+  <h2 class="mb-0">{data.title}</h2>
   <small>{data.publishDate.toLocaleDateString("en-US", options)}</small>
+  <p>{data.description}</p>
 </a>

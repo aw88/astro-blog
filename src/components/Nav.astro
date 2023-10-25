@@ -1,8 +1,8 @@
 ---
 const textLinks: { label: string; href: string }[] = [
   { label: "Home", href: "/" },
-  { label: "Work", href: "/work/" },
   { label: "Blog", href: "/blog/" },
+  { label: "Work", href: "/work/" },
 ];
 
 function isCurrent(href: string): boolean {
@@ -11,7 +11,7 @@ function isCurrent(href: string): boolean {
 ---
 
 <nav>
-  <ul>
+  <ul class="flex gap-4">
     {
       textLinks.map(({ label, href }) => (
         <li>
